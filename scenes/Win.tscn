@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cis50upyykjnx"]
+
+[ext_resource type="Script" path="res://scenes/scripts/Win.gd" id="1_a84gx"]
+[ext_resource type="Texture2D" uid="uid://btsqaha0re212" path="res://resources/sprites/exit.png" id="2_c2ymc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5jl34"]
+radius = 16.0
+
+[node name="Win" type="Area2D"]
+script = ExtResource("1_a84gx")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-7, 0)
+texture = ExtResource("2_c2ymc")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5jl34")
+
+[connection signal="body_entered" from="." to="." method="win"]

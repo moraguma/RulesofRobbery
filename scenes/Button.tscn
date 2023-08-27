@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://sy2u1rnvxrtl"]
+
+[ext_resource type="Script" path="res://scenes/scripts/Button.gd" id="1_7svm5"]
+[ext_resource type="Texture2D" uid="uid://dxdyrlg5vtxwk" path="res://resources/sprites/button.png" id="2_8x7ea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qls8e"]
+radius = 8.0
+
+[node name="Button" type="Area2D"]
+script = ExtResource("1_7svm5")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qls8e")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_8x7ea")
+hframes = 2
+
+[connection signal="body_entered" from="." to="." method="enter_button"]
+[connection signal="body_exited" from="." to="." method="exit_button"]
