@@ -23,6 +23,7 @@ func _ready():
 func enter_button(body):
 	if not body in bodies and body.get_collision_layer_value(1):
 		if len(bodies) == 0:
+			SoundController.play_sfx("switch_on")
 			for c in connects:
 				c.switch()
 				
@@ -36,6 +37,7 @@ func exit_button(body):
 		bodies.erase(body)
 	
 	if len(bodies) == 0:
+		SoundController.play_sfx("switch_off")
 		for c in connects:
 			c.switch()
 			

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://04cqgnyqxoor"]
+
+[ext_resource type="Theme" uid="uid://bjjtuf4dtsst3" path="res://resources/themes/BaseTheme.tres" id="1_3jv7l"]
+[ext_resource type="Script" path="res://scenes/scripts/LevelButton.gd" id="2_faovy"]
+
+[node name="LevelButton" type="Button"]
+texture_filter = 1
+offset_right = 32.0
+offset_bottom = 20.0
+theme = ExtResource("1_3jv7l")
+text = "99"
+flat = true
+script = ExtResource("2_faovy")

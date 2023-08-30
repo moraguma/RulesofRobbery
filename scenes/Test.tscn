@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn8roso02t64p"]
+[gd_scene load_steps=8 format=3 uid="uid://dn8roso02t64p"]
 
 [ext_resource type="Script" path="res://scenes/scripts/Environment.gd" id="1_63mu2"]
 [ext_resource type="TileSet" uid="uid://dpipuoclbg1o7" path="res://resources/tilesets/Map.tres" id="2_i7bcp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cis50upyykjnx" path="res://scenes/Win.tscn" id="4_0a66m"]
 [ext_resource type="PackedScene" uid="uid://sy2u1rnvxrtl" path="res://scenes/Button.tscn" id="5_y2n6p"]
 [ext_resource type="PackedScene" uid="uid://yd0jv6iaifvw" path="res://scenes/Laser.tscn" id="6_l1f1g"]
+[ext_resource type="Theme" uid="uid://bjjtuf4dtsst3" path="res://resources/themes/BaseTheme.tres" id="7_qgxxc"]
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_63mu2")
@@ -56,6 +57,7 @@ texture_path = "res://resources/sprites/player4.png"
 [node name="AlarmText" type="RichTextLabel" parent="."]
 offset_right = 480.0
 offset_bottom = 40.0
+theme = ExtResource("7_qgxxc")
 bbcode_enabled = true
 
 [node name="AlarmTimer" type="Timer" parent="."]

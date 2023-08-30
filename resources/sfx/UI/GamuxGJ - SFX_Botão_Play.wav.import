@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwu2047rttjd0"
+path="res://.godot/imported/GamuxGJ - SFX_Botão_Play.wav-eb239c896eba8cfa47c064f00abf91f0.sample"
+
+[deps]
+
+source_file="res://resources/sfx/UI/GamuxGJ - SFX_Botão_Play.wav"
+dest_files=["res://.godot/imported/GamuxGJ - SFX_Botão_Play.wav-eb239c896eba8cfa47c064f00abf91f0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

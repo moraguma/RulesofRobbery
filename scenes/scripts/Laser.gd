@@ -27,6 +27,8 @@ func _physics_process(delta):
 		var current_collider = get_collider()
 		if is_colliding() and current_collider != last_collider:
 			if current_collider.has_method("die"):
+				SoundController.play_sfx("die")
+				
 				current_collider.die()
 		
 		last_collider = current_collider
@@ -38,6 +40,8 @@ func _physics_process(delta):
 
 
 func switch():
+	last_collider = null
+	
 	active = not active
 	
 	update()
@@ -45,8 +49,10 @@ func switch():
 
 func update():
 	if active:
+		SoundController.play_sfx("laser_on")
 		line.show()
 		sprite.frame = ACTIVE_FRAME
 	else:
+		SoundController.play_sfx("laser_off")
 		line.hide()
 		sprite.frame = INACTIVE_FRAME

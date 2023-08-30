@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bbhmaybowvii2"
+path="res://.godot/imported/GamuxGJ - MUS_Menu.ogg-bb87bdd80f804f269038e01f741619c8.oggvorbisstr"
+
+[deps]
+
+source_file="res://resources/music/GamuxGJ - MUS_Menu.ogg"
+dest_files=["res://.godot/imported/GamuxGJ - MUS_Menu.ogg-bb87bdd80f804f269038e01f741619c8.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

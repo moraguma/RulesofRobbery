@@ -1,5 +1,7 @@
 extends Node2D
 
+signal sinal
+
 # --------------------------------------------------------------------------------------------------
 # CONSTANTS
 # --------------------------------------------------------------------------------------------------
@@ -29,6 +31,8 @@ var active = true
 
 
 func _ready():
+	max_time = 0
+	
 	start_alarm()
 	
 	assert(1 in players, "Must have player number 1")
@@ -57,6 +61,9 @@ func _physics_process(delta):
 		
 		if Input.is_action_just_pressed("reset"):
 			instant_reset()
+	
+	if Input.is_action_just_pressed("menu"):
+		Global.goto_scene("res://scenes/Menu.tscn")
 
 
 func _player_processing():
@@ -73,6 +80,8 @@ func _player_processing():
 
 func take_control(number: int):
 	if number != current_control:
+		SoundController.play_sfx("swoosh")
+		
 		wins[number] = false
 		players[current_control].controled = false
 		players[number].controled = true
@@ -97,6 +106,7 @@ func finish():
 
 
 func start_alarm():
+	
 	if max_time > 0:
 		alarm_timer.start(max_time)
 
@@ -117,6 +127,8 @@ func instant_reset():
 
 
 func reset():
+	players[current_control].active = false
+	
 	alarm_timer.stop()
 	
 	timer.start(RESET_TIME)

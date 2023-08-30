@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcg3w76b3os5k"
+path="res://.godot/imported/GamuxGJ - SFX_Laser_On.wav-02f0b2835cafc1b0a2fb1fa15ce4d140.sample"
+
+[deps]
+
+source_file="res://resources/sfx/Cenário/Laser on-off/GamuxGJ - SFX_Laser_On.wav"
+dest_files=["res://.godot/imported/GamuxGJ - SFX_Laser_On.wav-02f0b2835cafc1b0a2fb1fa15ce4d140.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

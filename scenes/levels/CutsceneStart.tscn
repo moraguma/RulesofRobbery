@@ -1,0 +1,293 @@
+[gd_scene load_steps=11 format=3 uid="uid://tpsemgf1pf6n"]
+
+[ext_resource type="Script" path="res://scenes/scripts/CutsceneStart.gd" id="1_cfkem"]
+[ext_resource type="Shader" path="res://resources/shader/Black.gdshader" id="1_ckgic"]
+[ext_resource type="Texture2D" uid="uid://bfdog77255bb" path="res://resources/sprites/floor.png" id="2_fc3iu"]
+[ext_resource type="Theme" uid="uid://bjjtuf4dtsst3" path="res://resources/themes/BaseTheme.tres" id="4_ub2n7"]
+[ext_resource type="Texture2D" uid="uid://dapilhx6royrj" path="res://resources/sprites/calvo1-portrait.png" id="5_uuwsr"]
+[ext_resource type="Texture2D" uid="uid://bcta0iddd3ve3" path="res://resources/sprites/calvo2-portrait.png" id="6_ufc01"]
+[ext_resource type="Texture2D" uid="uid://b3ne0icv524a8" path="res://resources/sprites/calvo3-portrait.png" id="7_trrlo"]
+[ext_resource type="Texture2D" uid="uid://cga01h1mesjh7" path="res://resources/sprites/não-calvo_portratit.png" id="8_k6wvs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wo6ho"]
+shader = ExtResource("1_ckgic")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b4xch"]
+
+[node name="Base" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_cfkem")
+path = "res://scenes/levels/1.tscn"
+
+[node name="Black" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wo6ho")
+position = Vector2(244, 140)
+scale = Vector2(31.5, 18.5)
+texture = ExtResource("2_fc3iu")
+
+[node name="1" type="Node2D" parent="."]
+
+[node name="1" type="RichTextLabel" parent="1"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 283.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center][wave]All set for tomorrow?"
+scroll_active = false
+
+[node name="3" type="RichTextLabel" parent="1"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 283.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center][wave]Great"
+scroll_active = false
+
+[node name="4" type="RichTextLabel" parent="1"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 283.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]Whatever happens, don't forget the [shake  level=5]3 rules of robbery"
+scroll_active = false
+
+[node name="5" type="RichTextLabel" parent="1"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 283.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]1 - No betraying your robbery crew"
+scroll_active = false
+
+[node name="6" type="RichTextLabel" parent="1"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 283.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]2 - Don't leave anyone behind"
+scroll_active = false
+
+[node name="7" type="RichTextLabel" parent="1"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 283.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]3 - Always cover your partner's back"
+scroll_active = false
+
+[node name="9" type="RichTextLabel" parent="1"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 283.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center][shake level=5](I'm gonna stab them in the back)"
+scroll_active = false
+
+[node name="2" type="Node2D" parent="."]
+
+[node name="2" type="RichTextLabel" parent="2"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 208.0
+offset_top = 48.0
+offset_right = 459.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]Yep"
+scroll_active = false
+
+[node name="8" type="RichTextLabel" parent="2"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 208.0
+offset_top = 48.0
+offset_right = 459.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]Ok"
+scroll_active = false
+
+[node name="9" type="RichTextLabel" parent="2"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 208.0
+offset_top = 48.0
+offset_right = 459.0
+offset_bottom = 88.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center][shake level=5](I'm gonna stab them in the back)"
+scroll_active = false
+
+[node name="3" type="Node2D" parent="."]
+
+[node name="2" type="RichTextLabel" parent="3"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 208.0
+offset_top = 192.0
+offset_right = 459.0
+offset_bottom = 232.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]Yeah"
+scroll_active = false
+
+[node name="8" type="RichTextLabel" parent="3"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 208.0
+offset_top = 192.0
+offset_right = 459.0
+offset_bottom = 232.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]You got it"
+scroll_active = false
+
+[node name="9" type="RichTextLabel" parent="3"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 208.0
+offset_top = 192.0
+offset_right = 459.0
+offset_bottom = 232.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center][shake level=5](I'm gonna stab them in the back)"
+scroll_active = false
+
+[node name="4" type="Node2D" parent="."]
+
+[node name="2" type="RichTextLabel" parent="4"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 192.0
+offset_right = 283.0
+offset_bottom = 232.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]Yes"
+scroll_active = false
+
+[node name="8" type="RichTextLabel" parent="4"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 192.0
+offset_right = 283.0
+offset_bottom = 232.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center]Dully noted"
+scroll_active = false
+
+[node name="9" type="RichTextLabel" parent="4"]
+visible = false
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_b4xch")
+clip_contents = false
+offset_left = 32.0
+offset_top = 192.0
+offset_right = 283.0
+offset_bottom = 232.0
+theme = ExtResource("4_ub2n7")
+bbcode_enabled = true
+text = "[center][shake level=5](I'm gonna stab them in the back)"
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Calvo1-portrait" type="Sprite2D" parent="."]
+position = Vector2(432, 48)
+texture = ExtResource("5_uuwsr")
+
+[node name="Calvo2-portrait" type="Sprite2D" parent="."]
+position = Vector2(432, 192)
+texture = ExtResource("6_ufc01")
+
+[node name="Calvo3-portrait" type="Sprite2D" parent="."]
+position = Vector2(48, 192)
+texture = ExtResource("7_trrlo")
+
+[node name="Não-calvoPortratit" type="Sprite2D" parent="."]
+position = Vector2(48, 48)
+texture = ExtResource("8_k6wvs")

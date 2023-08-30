@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hqse3rxav1cm"
+path="res://.godot/imported/GamuxGJ - SFX_Morte_Laser.wav-342a7bb676851ff301cb8eaaee080355.sample"
+
+[deps]
+
+source_file="res://resources/sfx/Personagens/Morte no Laser/GamuxGJ - SFX_Morte_Laser.wav"
+dest_files=["res://.godot/imported/GamuxGJ - SFX_Morte_Laser.wav-342a7bb676851ff301cb8eaaee080355.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

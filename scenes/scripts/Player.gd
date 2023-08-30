@@ -34,6 +34,7 @@ var active = true
 var inputs = [] # {"turning_dir": float, "dir": vec2, "delta": float}
 var pos = 0
 var bodies = []
+var can_detect = false
 
 
 # --------------------------------------------------------------------------------------------------
@@ -58,6 +59,8 @@ var bodies = []
 
 
 func _ready():
+	call_deferred("update_bodies")
+	
 	vision_cone.show()
 	
 	starting_pos = position
@@ -75,6 +78,11 @@ func _ready():
 	sprite.texture = load(texture_path)
 
 
+func update_bodies():
+	bodies = vision_cone.get_overlapping_bodies()
+	can_detect = true
+
+
 func _process(delta):
 	if controled:
 		if not exclamation_sprite.visible:
@@ -90,6 +98,9 @@ func _physics_process(delta):
 		_movement_processing(delta)
 		_animation_processing()
 		_vision_processing()
+	else:
+		velocity = Vector2(0, 0)
+		turning_velocity = 0.0
 
 
 func _movement_processing(delta):
@@ -104,8 +115,7 @@ func _movement_processing(delta):
 	else: 
 		if pos < len(inputs):
 			turning_dir = inputs[pos]["turning_dir"]
-			dir = inputs[pos]["dir"]
-			delta = inputs[pos]["delta"]
+			dir = inputs[pos]["dir"] * inputs[pos]["delta"] / delta
 		else:
 			turning_dir = 0.0
 			dir = Vector2(0, 0)
@@ -133,15 +143,16 @@ func _animation_processing():
 
 
 func _vision_processing():
-	for body in bodies:
-		raycast.target_position = (body.position - position)
-		raycast.force_raycast_update()
-		
-		if raycast.get_collider() == body and body.active:
-			see_player()
-			body.active = false
+	if can_detect:
+		for body in bodies:
+			raycast.target_position = (body.position - position)
+			raycast.force_raycast_update()
 			
-			exit_vision(body)
+			if raycast.get_collider() == body and body.active:
+				see_player()
+				body.active = false
+				
+				exit_vision(body)
 
 
 # --------------------------------------------------------------------------------------------------
@@ -165,7 +176,9 @@ func reset_movement():
 	reset_rotation()
 	pos = 0
 	
+	can_detect = false
 	bodies = []
+	call_deferred("update_bodies")
 	
 	sprite.show()
 	exclamation_sprite.hide()
@@ -186,6 +199,8 @@ func reset_memory():
 
 
 func see_player():
+	SoundController.play_sfx("detection")
+	
 	exclamation_sprite.show()
 	selection_sprite.hide()
 	
@@ -209,3 +224,13 @@ func enter_vision(body):
 func exit_vision(body):
 	if body in bodies:
 		bodies.erase(body)
+
+
+func step_left():
+	if controled:
+		SoundController.play_sfx("step_left")
+
+
+func step_right():
+	if controled:
+		SoundController.play_sfx("step_right")
